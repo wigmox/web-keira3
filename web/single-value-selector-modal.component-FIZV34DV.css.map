@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/shared/selectors/src/selectors/single-value-selector/single-value-selector-modal.component.scss"],
+  "sourcesContent": ["ngx-datatable {\r\n  max-height: 70vh;\r\n  overflow-y: auto;\r\n}\r\n"],
+  "mappings": ";AAAA;AACE,cAAA;AACA,cAAA;;",
+  "names": []
+}

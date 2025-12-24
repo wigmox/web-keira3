@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/shared/selectors/src/selectors/generic-option-selector/generic-option-selector.component.scss"],
+  "sourcesContent": [".ngx-select {\r\n  max-height: 30px;\r\n}\r\n\r\nngx-select {\r\n  span {\r\n    text-wrap-mode: nowrap;\r\n  }\r\n}\r\n\r\n::ng-deep ul.ngx-select__choices {\r\n  overflow-x: auto !important;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,cAAA;;AAIA,WAAA;AACE,kBAAA;;AAIJ,UAAA,EAAA,CAAA;AACE,cAAA;;",
+  "names": []
+}

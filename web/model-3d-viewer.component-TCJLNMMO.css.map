@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/shared/model-3d-viewer/src/model-3d-viewer.component.scss"],
+  "sourcesContent": [".model-viewer {\r\n  border-radius: 10px;\r\n}\r\n\r\n.model-3d-settings-container {\r\n  border-radius: 8px;\r\n  border: 1px solid white;\r\n  background-color: black;\r\n}\r\n\r\n.model-3d-settings {\r\n  color: white;\r\n  font-size: 20px;\r\n  cursor: pointer;\r\n}\r\n\r\n.bg-text-input {\r\n  width: 100px;\r\n}\r\n\r\n.model-3d-race {\r\n  height: 300px;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,iBAAA;;AAGF,CAAA;AACE,iBAAA;AACA,UAAA,IAAA,MAAA;AACA,oBAAA;;AAGF,CAAA;AACE,SAAA;AACA,aAAA;AACA,UAAA;;AAGF,CAAA;AACE,SAAA;;AAGF,CAAA;AACE,UAAA;;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/shared/base-editor-components/src/query-output/query-output.component.scss"],
+  "sourcesContent": [".query-type-switch {\r\n  padding-top: 6px;\r\n  padding-bottom: 4px;\r\n}\r\n\r\nbutton {\r\n  margin-right: 10px;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,eAAA;AACA,kBAAA;;AAGF;AACE,gBAAA;;",
+  "names": []
+}

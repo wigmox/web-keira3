@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/shared/selectors/src/selectors/flags-selector/flags-selector-modal.component.scss"],
+  "sourcesContent": [".table-wrapper {\r\n  max-height: 70vh;\r\n  overflow-y: auto;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,cAAA;AACA,cAAA;;",
+  "names": []
+}

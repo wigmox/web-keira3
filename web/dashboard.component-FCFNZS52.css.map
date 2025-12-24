@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/features/dashboard/src/dashboard.component.scss"],
+  "sourcesContent": ["p {\r\n  margin-bottom: 8px;\r\n}\r\n"],
+  "mappings": ";AAAA;AACE,iBAAA;;",
+  "names": []
+}

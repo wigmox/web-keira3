@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/main/main-window/src/sidebar/unsaved-icon/unsaved-icon.component.scss"],
+  "sourcesContent": ["i {\r\n  float: right;\r\n  line-height: 1.5;\r\n}\r\n"],
+  "mappings": ";AAAA;AACE,SAAA;AACA,eAAA;;",
+  "names": []
+}

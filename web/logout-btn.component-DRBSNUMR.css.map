@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/main/main-window/src/sidebar/logout-btn/logout-btn.component.scss"],
+  "sourcesContent": ["button.btn-sm {\r\n  font-size: 0.7rem;\r\n  margin-top: 6px;\r\n}\r\n"],
+  "mappings": ";AAAA,MAAA,CAAA;AACE,aAAA;AACA,cAAA;;",
+  "names": []
+}

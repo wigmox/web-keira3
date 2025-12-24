@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/features/sql-editor/src/sql-editor.component.scss"],
+  "sourcesContent": ["#code {\r\n  overflow: auto;\r\n  resize: vertical;\r\n  min-height: calc(1.5em * 6);\r\n  margin-bottom: 1rem;\r\n  border: 1px solid #e49649;\r\n  border-radius: 0.25rem;\r\n}\r\n\r\n#code ::ng-deep .cm-editor {\r\n  outline: none; // remove the default outline\r\n}\r\n\r\n.select-limit {\r\n  color: #495057;\r\n  background-color: #fff;\r\n  border: 1px solid #ced4da;\r\n  border-radius: 0.25rem;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,YAAA;AACA,UAAA;AACA,cAAA;AACA,iBAAA;AACA,UAAA,IAAA,MAAA;AACA,iBAAA;;AAGF,CATA,KASA,UAAA,CAAA;AACE,WAAA;;AAGF,CAAA;AACE,SAAA;AACA,oBAAA;AACA,UAAA,IAAA,MAAA;AACA,iBAAA;;",
+  "names": []
+}

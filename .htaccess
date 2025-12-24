@@ -1,0 +1,20 @@
+# Keira PHP 壳 + SPA 路由（需要 Apache 开启 AllowOverride All 和 mod_rewrite）
+
+RewriteEngine On
+
+# 防止直接访问内部代码/配置（仅允许通过 index.php/api 入口）
+RewriteRule ^(config|lib)(/|$) - [F,L]
+
+# 1) API：交给 /keira/api/index.php
+RewriteRule ^api($|/) - [L]
+
+# 2) 前端静态资源：直接放行 /keira/web/
+RewriteRule ^web($|/) - [L]
+
+# 3) 真实文件/目录直接访问
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 4) 其余都交给 PHP 壳（用于登录与 SPA deep-link）
+RewriteRule ^ index.php [L]

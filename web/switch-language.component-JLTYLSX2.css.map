@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/shared/switch-language/src/switch-language.component.scss"],
+  "sourcesContent": ["select {\r\n  color: #fff;\r\n}\r\n\r\noption,\r\noptgroup {\r\n  color: #000;\r\n  text-align: left;\r\n}\r\n"],
+  "mappings": ";AAAA;AACE,SAAA;;AAGF;AAAA;AAEE,SAAA;AACA,cAAA;;",
+  "names": []
+}

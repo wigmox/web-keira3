@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/features/gossip/src/gossip-menu-option-preview/gossip-menu-option-preview.component.scss"],
+  "sourcesContent": [".gossip-preview {\r\n  color: #fff;\r\n  padding: 10px;\r\n  margin-top: calc(50vh - 70%);\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,SAAA;AACA,WAAA;AACA,cAAA,KAAA,KAAA,EAAA;;",
+  "names": []
+}

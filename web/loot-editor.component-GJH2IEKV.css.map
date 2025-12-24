@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/shared/loot-editor/src/loot-editor.component.scss"],
+  "sourcesContent": [".reference {\r\n  font-weight: bold;\r\n}\r\n\r\n.group-1,\r\n.group-2,\r\n.group-3,\r\n.group-4,\r\n.group-5,\r\n.group-6,\r\n.group-7,\r\n.group-8,\r\n.group-9 {\r\n  display: block;\r\n  color: white;\r\n  width: 20px;\r\n  margin: auto;\r\n  font-weight: bold;\r\n  border-radius: 5px;\r\n}\r\n\r\n.group-1 {\r\n  background-color: #0f7200;\r\n}\r\n\r\n.group-2 {\r\n  background-color: #a70000;\r\n}\r\n\r\n.group-3 {\r\n  background-color: #0014d2;\r\n}\r\n\r\n.group-4 {\r\n  background-color: #936200;\r\n}\r\n\r\n.group-5 {\r\n  background-color: #5900b1;\r\n}\r\n\r\n.group-6 {\r\n  background-color: #000;\r\n}\r\n\r\n.group-7 {\r\n  background-color: #740090;\r\n}\r\n\r\n.group-8 {\r\n  background-color: #389c01;\r\n}\r\n\r\n.group-9 {\r\n  background-color: #ac00a3;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,eAAA;;AAGF,CAAA;AAAA,CAAA;AAAA,CAAA;AAAA,CAAA;AAAA,CAAA;AAAA,CAAA;AAAA,CAAA;AAAA,CAAA;AAAA,CAAA;AASE,WAAA;AACA,SAAA;AACA,SAAA;AACA,UAAA;AACA,eAAA;AACA,iBAAA;;AAGF,CAjBA;AAkBE,oBAAA;;AAGF,CArBA;AAsBE,oBAAA;;AAGF,CAzBA;AA0BE,oBAAA;;AAGF,CA7BA;AA8BE,oBAAA;;AAGF,CAjCA;AAkCE,oBAAA;;AAGF,CArCA;AAsCE,oBAAA;;AAGF,CAzCA;AA0CE,oBAAA;;AAGF,CA7CA;AA8CE,oBAAA;;AAGF,CAjDA;AAkDE,oBAAA;;",
+  "names": []
+}

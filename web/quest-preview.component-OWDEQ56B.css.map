@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/features/quest/src/quest-preview/quest-preview.component.scss"],
+  "sourcesContent": [".preview-content {\r\n  color: white;\r\n  padding: 0 20px;\r\n\r\n  p {\r\n    margin-bottom: 0.3rem;\r\n  }\r\n\r\n  .title {\r\n    margin-top: 10px;\r\n    margin-bottom: 6px;\r\n    text-align: center;\r\n    font-weight: bold;\r\n  }\r\n\r\n  ol,\r\n  ul {\r\n    padding: 0 0 0 17px;\r\n  }\r\n\r\n  .colored {\r\n    color: #ffd100;\r\n  }\r\n\r\n  .greyed {\r\n    color: #dbdbdb;\r\n  }\r\n\r\n  .red {\r\n    color: #f00;\r\n  }\r\n\r\n  .text-sm {\r\n    font-size: 0.8rem;\r\n  }\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,SAAA;AACA,WAAA,EAAA;;AAEA,CAJF,gBAIE;AACE,iBAAA;;AAGF,CARF,gBAQE,CAAA;AACE,cAAA;AACA,iBAAA;AACA,cAAA;AACA,eAAA;;AAGF,CAfF,gBAeE;AAAA,CAfF,gBAeE;AAEE,WAAA,EAAA,EAAA,EAAA;;AAGF,CApBF,gBAoBE,CAAA;AACE,SAAA;;AAGF,CAxBF,gBAwBE,CAAA;AACE,SAAA;;AAGF,CA5BF,gBA4BE,CAAA;AACE,SAAA;;AAGF,CAhCF,gBAgCE,CAAA;AACE,aAAA;;",
+  "names": []
+}

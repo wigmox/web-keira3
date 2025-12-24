@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/shared/selectors/src/selectors/base-selector/base-selector-btn.component.scss"],
+  "sourcesContent": ["button {\r\n  padding: 0 5px 6px;\r\n  line-height: 0.6;\r\n}\r\n"],
+  "mappings": ";AAAA;AACE,WAAA,EAAA,IAAA;AACA,eAAA;;",
+  "names": []
+}

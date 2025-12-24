@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/features/gameobject/src/gameobject-template/gameobject-template.component.scss"],
+  "sourcesContent": [".gameobject-preview {\r\n  text-align: center;\r\n  margin: auto;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,cAAA;AACA,UAAA;;",
+  "names": []
+}

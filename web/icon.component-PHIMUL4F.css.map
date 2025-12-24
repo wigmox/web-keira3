@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/shared/base-editor-components/src/icon/icon.component.scss"],
+  "sourcesContent": ["img {\r\n  border-radius: 0.2em;\r\n}\r\n"],
+  "mappings": ";AAAA;AACE,iBAAA;;",
+  "names": []
+}

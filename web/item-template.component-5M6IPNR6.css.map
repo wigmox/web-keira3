@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/features/item/src/item-template/item-template.component.scss"],
+  "sourcesContent": [".item-preview {\r\n  text-align: center;\r\n  margin: auto;\r\n\r\n  .item-stats {\r\n    border-radius: 3px;\r\n    text-align: left;\r\n    font-family: Verdana, 'Open Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;\r\n    font-size: 15px;\r\n    line-height: 25px;\r\n    width: auto;\r\n    min-width: 200px;\r\n    padding: 12px;\r\n    color: #ccc;\r\n  }\r\n\r\n  .icon-container {\r\n    height: 100px;\r\n  }\r\n\r\n  .item-stock-container {\r\n    position: relative;\r\n    height: 25px;\r\n    margin-top: -30px;\r\n  }\r\n\r\n  .stackable {\r\n    position: sticky;\r\n    margin-right: -50px;\r\n    font-weight: 700;\r\n    font-size: 30px;\r\n    white-space: nowrap;\r\n    text-shadow: 2px 2px #000;\r\n  }\r\n\r\n  .stackable-100 {\r\n    margin-right: -35px;\r\n  }\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,cAAA;AACA,UAAA;;AAEA,CAJF,aAIE,CAAA;AACE,iBAAA;AACA,cAAA;AACA;IAAA,OAAA;IAAA,WAAA;IAAA,KAAA;IAAA,gBAAA;IAAA,SAAA;IAAA;AACA,aAAA;AACA,eAAA;AACA,SAAA;AACA,aAAA;AACA,WAAA;AACA,SAAA;;AAGF,CAhBF,aAgBE,CAAA;AACE,UAAA;;AAGF,CApBF,aAoBE,CAAA;AACE,YAAA;AACA,UAAA;AACA,cAAA;;AAGF,CA1BF,aA0BE,CAAA;AACE,YAAA;AACA,gBAAA;AACA,eAAA;AACA,aAAA;AACA,eAAA;AACA,eAAA,IAAA,IAAA;;AAGF,CAnCF,aAmCE,CAAA;AACE,gBAAA;;",
+  "names": []
+}

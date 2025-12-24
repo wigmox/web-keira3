@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/shared/base-editor-components/src/query-output/query-error/query-error.component.scss"],
+  "sourcesContent": [".error-box {\r\n  table {\r\n    tr {\r\n      td:first-child {\r\n        font-weight: bold;\r\n        text-align: right;\r\n      }\r\n\r\n      td:last-child {\r\n        padding-left: 8px;\r\n      }\r\n    }\r\n  }\r\n}\r\n"],
+  "mappings": ";AAGM,CAAA,UAAA,MAAA,GAAA,EAAA;AACE,eAAA;AACA,cAAA;;AAGF,CALA,UAKA,MAAA,GAAA,EAAA;AACE,gBAAA;;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/shared/sai-editor/src/sai-editor.component.scss"],
+  "sourcesContent": [".sai-category {\r\n  border: 1px solid #e7e7e7;\r\n  border-left: none;\r\n\r\n  .sai-category-title {\r\n    font-size: 0.8rem;\r\n    font-weight: bold;\r\n    margin-top: 4px;\r\n    margin-bottom: 4px;\r\n  }\r\n\r\n  .sai-category-subtitle {\r\n    margin-bottom: 14px;\r\n  }\r\n\r\n  .form-group {\r\n    margin-bottom: 10px;\r\n    text-align: left;\r\n  }\r\n\r\n  select.form-control-sm {\r\n    padding: 0.1rem 0.2rem;\r\n    height: 24px;\r\n    font-size: 0.7rem;\r\n  }\r\n\r\n  input.form-control-sm {\r\n    height: 22px;\r\n    font-size: 0.8rem;\r\n  }\r\n\r\n  &.comment {\r\n    padding-top: 12px;\r\n    padding-bottom: 4px;\r\n    border-top: none;\r\n\r\n    .form-group {\r\n      text-align: right;\r\n    }\r\n\r\n    label {\r\n      padding-top: 6px;\r\n    }\r\n\r\n    input {\r\n      height: 28px;\r\n    }\r\n  }\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,UAAA,IAAA,MAAA;AACA,eAAA;;AAEA,CAJF,aAIE,CAAA;AACE,aAAA;AACA,eAAA;AACA,cAAA;AACA,iBAAA;;AAGF,CAXF,aAWE,CAAA;AACE,iBAAA;;AAGF,CAfF,aAeE,CAAA;AACE,iBAAA;AACA,cAAA;;AAGF,CApBF,aAoBE,MAAA,CAAA;AACE,WAAA,OAAA;AACA,UAAA;AACA,aAAA;;AAGF,CA1BF,aA0BE,KAAA,CANA;AAOE,UAAA;AACA,aAAA;;AAGF,CA/BF,YA+BE,CAAA;AACE,eAAA;AACA,kBAAA;AACA,cAAA;;AAEA,CApCJ,YAoCI,CALF,QAKE,CArBF;AAsBI,cAAA;;AAGF,CAxCJ,YAwCI,CATF,QASE;AACE,eAAA;;AAGF,CA5CJ,YA4CI,CAbF,QAaE;AACE,UAAA;;",
+  "names": []
+}

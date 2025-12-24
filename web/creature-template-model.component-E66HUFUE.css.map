@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/features/creature/src/creature-template-model/creature-template-model.component.scss"],
+  "sourcesContent": [".creature-preview {\r\n  text-align: center;\r\n  margin: 10px;\r\n  width: 300px;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,cAAA;AACA,UAAA;AACA,SAAA;;",
+  "names": []
+}

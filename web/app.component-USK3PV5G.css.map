@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["apps/keira/src/app/app.component.scss"],
+  "sourcesContent": [".newer-version-alert {\r\n  position: fixed;\r\n  bottom: 3px;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  background-color: rgba(0, 0, 0, 0.8);\r\n  box-shadow: 0 0 46px 0 white;\r\n  color: white;\r\n  padding: 14px 30px;\r\n  border-radius: 10px;\r\n\r\n  span {\r\n    font-style: italic;\r\n    font-weight: bold;\r\n  }\r\n\r\n  .btn {\r\n    font-weight: bold;\r\n  }\r\n\r\n  button.btn {\r\n    margin-left: 10px;\r\n    margin-right: -20px;\r\n  }\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,YAAA;AACA,UAAA;AACA,QAAA;AACA,aAAA,WAAA;AACA,oBAAA,KAAA,CAAA,EAAA,CAAA,EAAA,CAAA,EAAA;AACA,cAAA,EAAA,EAAA,KAAA,EAAA;AACA,SAAA;AACA,WAAA,KAAA;AACA,iBAAA;;AAEA,CAXF,oBAWE;AACE,cAAA;AACA,eAAA;;AAGF,CAhBF,oBAgBE,CAAA;AACE,eAAA;;AAGF,CApBF,oBAoBE,MAAA,CAJA;AAKE,eAAA;AACA,gBAAA;;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["libs/features/unused-guid-search/src/unused-guid-search.component.scss"],
+  "sourcesContent": ["#results {\r\n  width: 100%;\r\n  padding: 9.5px;\r\n  word-break: break-all;\r\n  word-wrap: break-word;\r\n  background-color: #f5f5f5;\r\n  border: 1px solid #ccc;\r\n  border-radius: 4px;\r\n}\r\n"],
+  "mappings": ";AAAA,CAAA;AACE,SAAA;AACA,WAAA;AACA,cAAA;AACA,aAAA;AACA,oBAAA;AACA,UAAA,IAAA,MAAA;AACA,iBAAA;;",
+  "names": []
+}
