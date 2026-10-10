@@ -7,6 +7,8 @@ require_once __DIR__ . '/../lib/auth.php';
 require_once __DIR__ . '/../lib/db_mysql.php';
 require_once __DIR__ . '/../lib/db_sqlite.php';
 
+keira_enforce_ip_allowlist();
+
 $base = keira_base_path();
 $path = parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH);
 $path = is_string($path) ? $path : '';
@@ -25,10 +27,7 @@ if ($path === '/auth/me' && $method === 'GET') {
 }
 
 if ($path === '/auth/login' && $method === 'POST') {
-    $cfg = keira_config();
-    $rl = $cfg['app']['rate_limit']['login'] ?? [];
-    $windowSeconds = (int)($rl['window_seconds'] ?? 0);
-    $maxAttempts = (int)($rl['max_attempts'] ?? 0);
+    [$maxAttempts, $windowSeconds] = keira_login_rate_limit();
     $ip = keira_client_ip();
     if (!keira_rate_limit_allow('auth_login', $ip, $maxAttempts, $windowSeconds)) {
         keira_json(['ok' => false, 'error' => 'rate_limited'], 429);

@@ -111,6 +111,13 @@ php -r "echo password_hash('yourPassword', PASSWORD_DEFAULT), PHP_EOL;"
 - `sqlite.sqlite_path` / `sqlite.sqlite_item3d_path` (optional)
 - `app.session.*` (cookie policy, idle timeout)
 - `app.rate_limit.login.*` (login rate limit thresholds)
+- `app.allowed_ips` (optional client allowlist; single IPs and CIDR ranges)
+- `app.trusted_proxies` (only these addresses may supply `X-Forwarded-For`)
+
+Defaults apply when the security keys are omitted: login is limited to 5 attempts
+per 900 seconds and sessions expire after 1800 seconds of inactivity. A public
+deployment should also set `app.allowed_ips` and connect with a non-root MySQL
+account limited to the schemas it needs.
 
 ## Deployment (First Time)
 

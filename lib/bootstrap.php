@@ -85,20 +85,37 @@ function keira_is_logged_in(): bool {
 
     $cfg = keira_config();
     $sessionCfg = $cfg['app']['session'] ?? [];
+    // 未配置时按 30 分钟处理：漏配 config 不应等于会话永不过期。
     $idleTimeout = (int)($sessionCfg['idle_timeout_seconds'] ?? 0);
-
-    if ($idleTimeout > 0) {
-        $now = time();
-        $last = (int)($_SESSION['keira_auth_last'] ?? ($_SESSION['keira_auth_at'] ?? 0));
-        if ($last > 0 && ($now - $last) > $idleTimeout) {
-            // Expired idle session
-            $_SESSION = [];
-            return false;
-        }
-        $_SESSION['keira_auth_last'] = $now;
+    if ($idleTimeout <= 0) {
+        $idleTimeout = 1800;
     }
 
+    $now = time();
+    $last = (int)($_SESSION['keira_auth_last'] ?? ($_SESSION['keira_auth_at'] ?? 0));
+    if ($last > 0 && ($now - $last) > $idleTimeout) {
+        // Expired idle session
+        $_SESSION = [];
+        return false;
+    }
+    $_SESSION['keira_auth_last'] = $now;
+
     return true;
+}
+
+function keira_login_rate_limit(): array {
+    $rl = keira_config()['app']['rate_limit']['login'] ?? [];
+    $maxAttempts = (int)($rl['max_attempts'] ?? 0);
+    $windowSeconds = (int)($rl['window_seconds'] ?? 0);
+
+    if ($maxAttempts <= 0) {
+        $maxAttempts = 5;
+    }
+    if ($windowSeconds <= 0) {
+        $windowSeconds = 900;
+    }
+
+    return [$maxAttempts, $windowSeconds];
 }
 
 function keira_require_login_json(): void {
@@ -148,11 +165,77 @@ function keira_client_ip(): string {
     return $remoteAddr !== '' ? $remoteAddr : 'unknown';
 }
 
+// 可选的客户端来源白名单：支持单个 IP 与 10.0.0.0/8 形式的网段；未配置即不限制。
+function keira_ip_in_cidr(string $ip, string $cidr): bool {
+    $parts = explode('/', $cidr, 2);
+    if (count($parts) !== 2 || !is_numeric($parts[1])) {
+        return false;
+    }
+
+    $ipBin = @inet_pton($ip);
+    $subnetBin = @inet_pton($parts[0]);
+    if ($ipBin === false || $subnetBin === false || strlen($ipBin) !== strlen($subnetBin)) {
+        return false;
+    }
+
+    $bits = (int)$parts[1];
+    $maxBits = strlen($ipBin) * 8;
+    if ($bits < 0 || $bits > $maxBits) {
+        return false;
+    }
+
+    $bytes = intdiv($bits, 8);
+    if ($bytes > 0 && substr($ipBin, 0, $bytes) !== substr($subnetBin, 0, $bytes)) {
+        return false;
+    }
+
+    $rem = $bits % 8;
+    if ($rem === 0) {
+        return true;
+    }
+
+    $mask = (0xFF << (8 - $rem)) & 0xFF;
+    return (ord($ipBin[$bytes]) & $mask) === (ord($subnetBin[$bytes]) & $mask);
+}
+
+function keira_is_ip_allowed(): bool {
+    $allowed = keira_config()['app']['allowed_ips'] ?? [];
+    if (!is_array($allowed) || $allowed === []) {
+        return true;
+    }
+
+    $ip = keira_client_ip();
+    foreach ($allowed as $entry) {
+        $entry = trim((string)$entry);
+        if ($entry === '') {
+            continue;
+        }
+        if ($entry === $ip || (strpos($entry, '/') !== false && keira_ip_in_cidr($ip, $entry))) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+function keira_enforce_ip_allowlist(): void {
+    if (keira_is_ip_allowed()) {
+        return;
+    }
+
+    http_response_code(403);
+    header('Content-Type: text/plain; charset=utf-8');
+    echo "Forbidden\n";
+    exit;
+}
+
 function keira_rate_limit_dir(): string {
     $cfg = keira_config();
     $dir = (string)($cfg['app']['rate_limit']['dir'] ?? '');
     if ($dir === '') {
-        $dir = rtrim(sys_get_temp_dir(), '/\\') . DIRECTORY_SEPARATOR . 'keira-ratelimit';
+        // 默认落在项目内 storage/ratelimit：sys_get_temp_dir() 在部分 Windows 部署下不可写，
+        // 而限流器打不开文件时是放行的，会让限流静默失效。
+        $dir = dirname(__DIR__) . DIRECTORY_SEPARATOR . 'storage' . DIRECTORY_SEPARATOR . 'ratelimit';
     }
     if (!is_dir($dir)) {
         @mkdir($dir, 0777, true);

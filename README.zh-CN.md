@@ -111,6 +111,11 @@ php -r "echo password_hash('yourPassword', PASSWORD_DEFAULT), PHP_EOL;"
 - `sqlite.sqlite_path` / `sqlite.sqlite_item3d_path`（可选）
 - `app.session.*`（cookie 策略、空闲超时）
 - `app.rate_limit.login.*`（登录限流阈值）
+- `app.allowed_ips`（可选来源白名单，支持单个 IP 与网段）
+- `app.trusted_proxies`（仅这些地址提供的 `X-Forwarded-For` 会被采信）
+
+未配置安全项时使用默认值：登录 900 秒内最多 5 次，会话空闲 1800 秒失效。
+公网部署还应配置 `app.allowed_ips`，并使用只具备所需库权限的非 root 数据库账号。
 
 ## 部署步骤（首次）
 

@@ -5,6 +5,8 @@ declare(strict_types=1);
 require_once __DIR__ . '/lib/bootstrap.php';
 require_once __DIR__ . '/lib/auth.php';
 
+keira_enforce_ip_allowlist();
+
 $base = keira_base_path();
 $path = parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH);
 $path = is_string($path) ? $path : '';
